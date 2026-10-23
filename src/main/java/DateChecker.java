@@ -1,20 +1,17 @@
+/**
+ * Checks if a month has 31 days.
+ * February returns false (it has 28 or 29 days).
+ * Null throws IllegalArgumentException.
+ */
 public class DateChecker {
 
     public boolean has31Days(Month month) {
         if (month == null) {
             throw new IllegalArgumentException("Month must not be null");
         }
-        switch (month) {
-            case JANUARY:
-            case MARCH:
-            case MAY:
-            case JULY:
-            case AUGUST:
-            case OCTOBER:
-            case DECEMBER:
-                return true;
-            default:
-                return false;
-        }
+        return switch (month) {
+            case JANUARY, MARCH, MAY, JULY, AUGUST, OCTOBER, DECEMBER -> true;
+            default -> false;
+        };
     }
 }
