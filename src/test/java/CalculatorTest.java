@@ -81,4 +81,18 @@ class CalculatorTest {
         assertThrows(ArithmeticException.class, () -> calculator.divide(10, 0));
     }
 
+    @Test
+    void isEvenTrue() {
+        assertTrue(calculator.isEven(4));
+        assertTrue(calculator.isEven(0));
+        assertTrue(calculator.isEven(-6));
+    }
+
+    @Test
+    void isEvenFalse() {
+        assertFalse(calculator.isEven(7));
+        assertFalse(calculator.isEven(-3));
+    }
+
+
 }
