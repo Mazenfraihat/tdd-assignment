@@ -28,4 +28,19 @@ class CalculatorTest {
         assertEquals(7, calculator.sum(7, 0));
         assertEquals(0, calculator.sum(0, 0));
     }
+
+    @Test
+    void subtractPositiveResult() {
+        assertEquals(6, calculator.subtract(10, 4));
+    }
+
+    @Test
+    void subtractNegativeResult() {
+        assertEquals(-6, calculator.subtract(4, 10));
+    }
+
+    @Test
+    void subtractNegativeOperand() {
+        assertEquals(8, calculator.subtract(5, -3));
+    }
 }
