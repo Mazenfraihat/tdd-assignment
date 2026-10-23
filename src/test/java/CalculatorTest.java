@@ -75,4 +75,10 @@ class CalculatorTest {
     void divideZeroNumerator() {
         assertEquals(0, calculator.divide(0, 5));
     }
+
+    @Test
+    void divideByZeroThrows() {
+        assertThrows(ArithmeticException.class, () -> calculator.divide(10, 0));
+    }
+
 }
