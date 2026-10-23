@@ -60,4 +60,19 @@ class CalculatorTest {
         assertEquals(12, calculator.multiply(-3, -4));
     }
 
+    @Test
+    void divideExact() {
+        assertEquals(5, calculator.divide(10, 2));
+    }
+
+    @Test
+    void divideTruncates() {
+        assertEquals(3, calculator.divide(7, 2));
+        assertEquals(-3, calculator.divide(-7, 2));
+    }
+
+    @Test
+    void divideZeroNumerator() {
+        assertEquals(0, calculator.divide(0, 5));
+    }
 }
