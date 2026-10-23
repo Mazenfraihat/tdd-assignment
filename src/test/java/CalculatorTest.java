@@ -43,4 +43,21 @@ class CalculatorTest {
     void subtractNegativeOperand() {
         assertEquals(8, calculator.subtract(5, -3));
     }
+
+    @Test
+    void multiplyPositives() {
+        assertEquals(12, calculator.multiply(3, 4));
+    }
+
+    @Test
+    void multiplyByZero() {
+        assertEquals(0, calculator.multiply(9, 0));
+    }
+
+    @Test
+    void multiplyNegatives() {
+        assertEquals(-12, calculator.multiply(-3, 4));
+        assertEquals(12, calculator.multiply(-3, -4));
+    }
+
 }
